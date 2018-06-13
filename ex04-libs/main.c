@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 #include "simple_sum.h"
+#include "simple_sum.h"
+#include "simple_sum.h"
 #include "simple_log.h"
 #include "simple_mse.h"
 

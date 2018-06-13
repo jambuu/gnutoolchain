@@ -1,5 +1,4 @@
 src=..
-prefix=/usr
 major=2
 minor=0
 
@@ -32,15 +31,4 @@ main.o: $(src)/main.c
 clean:
 	rm *.o *.a *.so* simple_math 
 
-install: 
-	install -m 0755 simple_math $(prefix)/bin 
-	install -m 0755 libsimple_mse.so* $(prefix)/lib
-	install -D $(src)/simple_mse.h $(prefix)/include/simple_mse/simple_mse.h
-
-uninstall: 
-	rm $(prefix)/bin/simple_math
-	rm $(prefix)/lib/libsimple_mse.so*
-	rm -rf $(prefix)/include/simple_mse/
-
-.PHONY: all test clean install uninstall libsimple_mse.so
 .PHONY: simple_mse.o libsimple_mse.so

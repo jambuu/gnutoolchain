@@ -35,12 +35,12 @@ clean:
 install: 
 	install -m 0755 simple_math $(prefix)/bin 
 	install -m 0755 libsimple_mse.so* $(prefix)/lib
-	install -D $(src)/simple_mse.h $(prefix)/include/simple_mse/simple_mse.h
+	install -m 0644 $(src)/simple_mse.pc $(prefix)/lib/pkgconfig
 
 uninstall: 
 	rm $(prefix)/bin/simple_math
 	rm $(prefix)/lib/libsimple_mse.so*
-	rm -rf $(prefix)/include/simple_mse/
+	rm $(prefix)/lib/pkgconfig/simple_mse.pc 
 
 .PHONY: all test clean install uninstall libsimple_mse.so
 .PHONY: simple_mse.o libsimple_mse.so
